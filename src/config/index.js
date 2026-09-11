@@ -1,3 +1,10 @@
+window.DEMO_CONFIG = {
+  demoId: 'DEMO-01',
+  industry: 'Professional & B2B Services',
+  clientName: 'Nexora Advisory',
+  appsScriptUrl: window.APPS_SCRIPT_WEB_APP_URL || 'YOUR_SHARED_APPS_SCRIPT_WEB_APP_URL'
+};
+
 /**
  * ScaleNova Client Demo 01 — Nexora Advisory
  * Frontend Configuration Module (src/config/index.js)
