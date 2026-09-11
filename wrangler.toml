@@ -1,0 +1,14 @@
+name = "scalenova-demo-01-nexora-advisory"
+main = "src/worker.js"
+compatibility_date = "2026-09-01"
+
+[assets]
+directory = "./"
+binding = "ASSETS"
+
+[vars]
+ENVIRONMENT = "production"
+DEMO_ID = "DEMO-01"
+CLIENT_NAME = "Nexora Advisory"
+INDUSTRY = "Professional & B2B Services"
+PRIMARY_DOMAIN = "demo1.scalenovasys.com"
