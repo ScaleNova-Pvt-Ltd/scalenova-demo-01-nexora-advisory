@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Strategic Consultation — Nexora Advisory</title>
+  <meta name="description" content="Schedule a confidential strategic advisory conference with Nexora practice partners.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23070D18'/><path d='M8 24L16 8L24 24H19L16 17L13 24H8Z' fill='%2300B4D8'/></svg>">
+  <link rel="stylesheet" href="src/styles/theme.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-mark">N</div>
+        <span class="brand-name">NEXORA</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="consulting.html" class="nav-link">Consulting</a></li>
+          <li><a href="technology.html" class="nav-link">Technology</a></li>
+          <li><a href="transformation.html" class="nav-link">Transformation</a></li>
+          <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+          <li><a href="insights.html" class="nav-link">Insights</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.82rem;">Request Proposal</a>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px;">
+    <div class="container" style="max-width: 840px;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="eyebrow">Partner Advisory Access</span>
+        <h1>Schedule Executive Consultation</h1>
+        <p class="lead">30 or 60-minute confidential strategic briefing with a Nexora Practice Director.</p>
+      </div>
+
+      <div class="form-card">
+        <form id="consultation-form">
+          <!-- Honeypot -->
+          <div class="honeypot" aria-hidden="true">
+            <input type="text" name="website_hp" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Preferred Date *</label>
+              <input type="date" name="preferredDate" id="book-date" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferred Time Slot (IST) *</label>
+              <select name="preferredTime" class="form-select" required>
+                <option value="10:00 AM – 11:00 AM IST">10:00 AM – 11:00 AM IST</option>
+                <option value="11:30 AM – 12:30 PM IST" selected>11:30 AM – 12:30 PM IST</option>
+                <option value="02:30 PM – 03:30 PM IST">02:30 PM – 03:30 PM IST</option>
+                <option value="04:00 PM – 05:00 PM IST">04:00 PM – 05:00 PM IST</option>
+                <option value="05:30 PM – 06:30 PM IST">05:30 PM – 06:30 PM IST</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Executive Name *</label>
+              <input type="text" name="name" class="form-input" placeholder="e.g. Rajiv Singhania" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Corporate Email *</label>
+              <input type="email" name="email" class="form-input" placeholder="rajiv@singhania-logistics.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Direct Telephone *</label>
+              <input type="tel" name="phone" class="form-input" placeholder="+91 98200 12345" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Enterprise / Organization *</label>
+              <input type="text" name="company" class="form-input" placeholder="e.g. Singhania Logistics Ltd" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Primary Practice Required</label>
+              <select name="service" class="form-select">
+                <option value="Management & Strategic Advisory">Management & Strategic Advisory</option>
+                <option value="Enterprise Cloud & Technology Advisory">Enterprise Cloud & Technology Advisory</option>
+                <option value="Corporate Finance & M&A Transformation">Corporate Finance & M&A Transformation</option>
+                <option value="Supply Chain & Operational Scale">Supply Chain & Operational Scale</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Estimated Engagement Budget</label>
+              <select name="budget" class="form-select">
+                <option value="₹10,00,000 – ₹25,00,000">₹10,00,000 – ₹25,00,000</option>
+                <option value="₹25,00,000 – ₹50,00,000" selected>₹25,00,000 – ₹50,00,000</option>
+                <option value="₹50,00,000 – ₹1,00,00,000">₹50,00,000 – ₹1,00,00,000</option>
+                <option value="₹1,00,00,000+">₹1,00,00,000+ (Comprehensive Transformation)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Discussion Agenda & Strategic Context *</label>
+            <textarea name="message" class="form-textarea" placeholder="Outline your key operational bottlenecks, modernization goals, or target timelines..." required></textarea>
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">Confirm Strategic Briefing</button>
+          <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 12px;">
+            Strict confidentiality guaranteed under mutual non-disclosure standards.
+          </p>
+        </form>
+
+        <div id="receipt" class="receipt-box">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(0, 180, 216, 0.1); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <span class="eyebrow">Briefing Scheduled</span>
+          <h2>Consultation Request Confirmed</h2>
+          <p>Your session has been queued with the Nexora managing partner desk and recorded in the ScaleNova CRM.</p>
+          <div class="receipt-ref" id="ref-id">SN-NEX-XXXXXXXX</div>
+          <div style="margin-top: 24px;">
+            <a href="index.html" class="btn btn-secondary">Return to Overview</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="text-align: center; font-size: 0.8rem; color: var(--text-muted);">
+      &copy; 2026 Nexora Advisory. ScaleNova Systems EliteOS Demonstration.
+    </div>
+  </footer>
+
+  <script src="src/config/index.js"></script>
+  <script src="src/services/api.js"></script>
+  <script>
+    // Set minimum date to tomorrow
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    document.getElementById('book-date').min = tomorrow.toISOString().split('T')[0];
+    document.getElementById('book-date').value = tomorrow.toISOString().split('T')[0];
+
+    document.getElementById('consultation-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Transmitting to Partner Desk...';
+
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+      data.leadType = 'CONSULTATION';
+      data.page = 'Book Consultation';
+
+      try {
+        const result = await ScaleNovaAPI.submitLead(data);
+        document.getElementById('consultation-form').style.display = 'none';
+        document.getElementById('ref-id').textContent = result.submissionId;
+        document.getElementById('receipt').classList.add('active');
+      } catch (err) {
+        alert(err.message || 'Error scheduling consultation. Please contact direct desk.');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Confirm Strategic Briefing';
+      }
+    });
+  </script>
+</body>
+</html>

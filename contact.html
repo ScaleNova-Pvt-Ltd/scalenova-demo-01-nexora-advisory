@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Proposal & Contact — Nexora Advisory</title>
+  <meta name="description" content="Submit an RFP or contact Nexora's advisory desks in Mumbai, Bengaluru, Singapore, or London.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23070D18'/><path d='M8 24L16 8L24 24H19L16 17L13 24H8Z' fill='%2300B4D8'/></svg>">
+  <link rel="stylesheet" href="src/styles/theme.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-mark">N</div>
+        <span class="brand-name">NEXORA</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="consulting.html" class="nav-link">Consulting</a></li>
+          <li><a href="technology.html" class="nav-link">Technology</a></li>
+          <li><a href="transformation.html" class="nav-link">Transformation</a></li>
+          <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+          <li><a href="insights.html" class="nav-link">Insights</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="book-consultation.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.82rem;">Book Consultation</a>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="eyebrow">Enterprise Inquiries</span>
+        <h1>Request Advisory Proposal</h1>
+        <p class="lead">Submit an RFP, scope a transformation sprint, or connect with our regional partners.</p>
+      </div>
+
+      <div class="grid-2" style="align-items: start;">
+        <!-- Form -->
+        <div class="form-card">
+          <form id="contact-form">
+            <div class="honeypot" aria-hidden="true">
+              <input type="text" name="website_hp" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Full Name *</label>
+                <input type="text" name="name" class="form-input" placeholder="e.g. Shalini Roy" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Corporate Email *</label>
+                <input type="email" name="email" class="form-input" placeholder="shalini@royenterprises.in" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Contact Phone *</label>
+                <input type="tel" name="phone" class="form-input" placeholder="+91 98300 44556" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Company Name *</label>
+                <input type="text" name="company" class="form-input" placeholder="e.g. Roy Enterprises" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Advisory Discipline</label>
+                <select name="service" class="form-select">
+                  <option value="Strategic Management Consulting">Strategic Management Consulting</option>
+                  <option value="Cloud Modernization & Enterprise Tech">Cloud Modernization & Enterprise Tech</option>
+                  <option value="M&A Synergy & Capital Transformation">M&A Synergy & Capital Transformation</option>
+                  <option value="Operational Due Diligence">Operational Due Diligence</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Target Investment / Budget</label>
+                <select name="budget" class="form-select">
+                  <option value="₹10L – ₹25L">₹10 Lakh – ₹25 Lakh</option>
+                  <option value="₹25L – ₹50L" selected>₹25 Lakh – ₹50 Lakh</option>
+                  <option value="₹50L – ₹1Cr">₹50 Lakh – ₹1 Crore</option>
+                  <option value="₹1Cr+">₹1 Crore+ (Full Enterprise Scope)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Scope of Work & Objectives *</label>
+              <textarea name="message" class="form-textarea" placeholder="Detail your mandate, expected deliverables, and decision milestones..." required></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">Transmit Formal Proposal Request</button>
+          </form>
+
+          <div id="receipt" class="receipt-box">
+            <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(0, 180, 216, 0.1); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <span class="eyebrow">Dossier Registered</span>
+            <h2>Proposal Request Dispatched</h2>
+            <p>Your RFP has been ingested and allocated to the designated practice lead.</p>
+            <div class="receipt-ref" id="ref-id">SN-NEX-XXXXXXXX</div>
+            <div style="margin-top: 24px;">
+              <a href="index.html" class="btn btn-secondary">Back to Nexora Home</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Office Details -->
+        <div>
+          <div class="card" style="margin-bottom: 24px;">
+            <span class="eyebrow">Headquarters</span>
+            <h3 style="margin-bottom: 8px;">Mumbai Financial Centre</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;">
+              Level 14, Tower B, BKC One, Bandra Kurla Complex, Mumbai, Maharashtra 400051
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+              <strong>Direct Phone:</strong> +91 (022) 6982 4400<br>
+              <strong>Desk Email:</strong> advisory@nexora.example.com
+            </p>
+          </div>
+
+          <div class="card" style="margin-bottom: 24px;">
+            <span class="eyebrow">Technology Centre</span>
+            <h3 style="margin-bottom: 8px;">Bengaluru Innovation Hub</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;">
+              Pritech Park SEZ, Outer Ring Road, Bellandur, Bengaluru, Karnataka 560103
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+              <strong>Tech Advisory Line:</strong> +91 (080) 4122 8890
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="eyebrow">International Desks</span>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; font-size: 0.85rem;">
+              <div>
+                <strong>Singapore:</strong><br>
+                Marina Bay Financial Centre, Tower 1<br>
+                +65 6720 1199
+              </div>
+              <div>
+                <strong>London:</strong><br>
+                14 Berkeley Square, Mayfair, W1J 6AE<br>
+                +44 20 7946 0880
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="text-align: center; font-size: 0.8rem; color: var(--text-muted);">
+      &copy; 2026 Nexora Advisory. ScaleNova Systems EliteOS Demonstration.
+    </div>
+  </footer>
+
+  <script src="src/config/index.js"></script>
+  <script src="src/services/api.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Transmitting RFP...';
+
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+      data.leadType = 'QUOTE_REQUEST';
+      data.page = 'Contact / Request Proposal';
+
+      try {
+        const result = await ScaleNovaAPI.submitLead(data);
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('ref-id').textContent = result.submissionId;
+        document.getElementById('receipt').classList.add('active');
+      } catch (err) {
+        alert(err.message || 'Error submitting proposal request. Please call direct desk.');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Transmit Formal Proposal Request';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "scalenova-demo-01-nexora-advisory",
+  "version": "1.0.0",
+  "description": "ScaleNova EliteOS Demonstration — Nexora Advisory (Professional & B2B Services)",
+  "author": "ScaleNova Systems <engineering@scalenovasys.com>",
+  "private": true,
+  "scripts": {
+    "dev": "npx -y serve -l 3001 .",
+    "start": "npx -y serve -l 3001 .",
+    "test": "node test/validate-system.js"
+  }
+}
