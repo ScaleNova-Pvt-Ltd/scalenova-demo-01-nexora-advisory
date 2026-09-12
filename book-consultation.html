@@ -24,17 +24,46 @@
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Overview</a></li>
-          <li><a href="about.html" class="nav-link">Firm & Partners</a></li>
           <li><a href="consulting.html" class="nav-link">Practices</a></li>
-          <li><a href="technology.html" class="nav-link">Enterprise Cloud</a></li>
-          <li><a href="transformation.html" class="nav-link">Capital Governance</a></li>
+          <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+          <li><a href="about.html" class="nav-link">Firm & Partners</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <a href="contact.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.82rem;">Direct Partner Desk</a>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="contact.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.82rem;">Direct Desk</a>
+        <button type="button" class="mobile-nav-toggle" aria-label="Open mobile menu" onclick="toggleNexoraSidePanel()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- Slide-Out Mobile App-Like Drawer -->
+  <div class="side-panel-overlay" id="nexoraSideOverlay" onclick="toggleNexoraSidePanel()"></div>
+  <aside class="side-panel-drawer" id="nexoraSideDrawer" aria-label="Mobile Navigation">
+    <div class="side-panel-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="brand-mark" style="width: 32px; height: 32px; font-size: 1rem;">N</div>
+        <span class="brand-name" style="font-size: 1.1rem;">NEXORA</span>
+      </div>
+      <button class="side-panel-close" aria-label="Close menu" onclick="toggleNexoraSidePanel()">&times;</button>
+    </div>
+    <ul class="side-panel-nav">
+      <li><a href="index.html">Overview <span>&rarr;</span></a></li>
+      <li><a href="consulting.html">Practices <span>&rarr;</span></a></li>
+      <li><a href="technology.html">Enterprise Cloud <span>&rarr;</span></a></li>
+      <li><a href="transformation.html">Capital Governance <span>&rarr;</span></a></li>
+      <li><a href="case-studies.html">Case Studies <span>&rarr;</span></a></li>
+      <li><a href="about.html">Firm & Partners <span>&rarr;</span></a></li>
+      <li><a href="insights.html">Insights <span>&rarr;</span></a></li>
+      <li><a href="contact.html">Contact <span>&rarr;</span></a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 24px;">
+      <a href="book-consultation.html" class="btn btn-primary" style="width: 100%; text-align: center; padding: 14px;">Book a Consultation &rarr;</a>
+    </div>
+  </aside>
 
   <main style="padding-top: calc(var(--header-height) + 50px); padding-bottom: 96px; background: var(--bg-secondary);">
     <div class="container" style="max-width: 820px;">
@@ -53,7 +82,7 @@
             <input type="text" name="website_hp" tabindex="-1" autocomplete="off">
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="form-row-2col">
             <div class="form-group">
               <label class="form-label">Preferred Date *</label>
               <input type="date" name="preferredDate" id="book-date" class="form-input" required>
@@ -70,7 +99,7 @@
             </div>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="form-row-2col">
             <div class="form-group">
               <label class="form-label">Executive Name *</label>
               <input type="text" name="name" class="form-input" placeholder="e.g. Rajiv Singhania" required>
@@ -81,7 +110,7 @@
             </div>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="form-row-2col">
             <div class="form-group">
               <label class="form-label">Direct Telephone *</label>
               <input type="tel" name="phone" class="form-input" placeholder="+91 98200 12345" required>
@@ -92,7 +121,7 @@
             </div>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="form-row-2col">
             <div class="form-group">
               <label class="form-label">Primary Practice Required</label>
               <select name="service" class="form-select">
@@ -180,6 +209,20 @@
         btn.textContent = 'Confirm Strategic Briefing →';
       }
     });
+    function toggleNexoraSidePanel() {
+      const drawer = document.getElementById('nexoraSideDrawer');
+      const overlay = document.getElementById('nexoraSideOverlay');
+      const isOpen = drawer.classList.contains('active');
+      if (isOpen) {
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('side-panel-open');
+      } else {
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+        document.body.classList.add('side-panel-open');
+      }
+    }
   </script>
 </body>
 </html>

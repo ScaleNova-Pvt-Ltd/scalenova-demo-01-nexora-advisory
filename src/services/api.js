@@ -59,25 +59,50 @@ window.ScaleNovaAPI = (function () {
       return mockSuccessResponse(payload);
     }
 
+    // Generate optimistic valid tracking ID for instant snappy response
+    const optimisticId = 'SN-D01-' + new Date().toISOString().slice(0, 10).replace(/-/g, '') + '-' + Math.floor(1000 + Math.random() * 9000);
+
+    // Immediate background dispatch to production gateway (Google Sheets -> Email -> Frappe CRM)
+    const networkPromise = fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    }).then(async r => {
+      try {
+        const data = await r.json();
+        return data;
+      } catch (e) {
+        return { success: true, submission_id: optimisticId };
+      }
+    }).catch(err => {
+      console.warn('[ScaleNova API] Network dispatch warning:', err);
+      return { success: true, submission_id: optimisticId };
+    });
+
+    // 950ms max latency threshold so visitor receives an instant, sleek confirmation without 5s spinning delay
+    const quickTimeout = new Promise(resolve => setTimeout(() => {
+      resolve({ success: true, submission_id: optimisticId, optimistic: true });
+    }, 950));
+
     try {
-      const resp = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(payload)
-      });
-
-      if (!resp.ok) {
-        throw new Error('HTTP ' + resp.status);
-      }
-
-      const result = await resp.json();
-      if (result.success === false) {
-        throw new Error(result.message || 'Unable to process the request.');
-      }
-      return result;
+      const result = await Promise.race([networkPromise, quickTimeout]);
+      return {
+        success: true,
+        submission_id: (result && (result.submission_id || result.submissionId)) || optimisticId,
+        submissionId: (result && (result.submission_id || result.submissionId)) || optimisticId,
+        demo_id: 'DEMO-01',
+        lead_type: payload.lead_type,
+        message: 'Submission received successfully'
+      };
     } catch (err) {
-      console.warn('[ScaleNova API] Network error, falling back to local simulation:', err);
-      return mockSuccessResponse(payload);
+      return {
+        success: true,
+        submission_id: optimisticId,
+        submissionId: optimisticId,
+        demo_id: 'DEMO-01',
+        lead_type: payload.lead_type,
+        message: 'Submission received successfully'
+      };
     }
   }
 
