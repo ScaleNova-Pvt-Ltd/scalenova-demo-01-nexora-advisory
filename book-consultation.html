@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Strategic Consultation — Nexora Advisory</title>
-  <meta name="description" content="Schedule a confidential strategic advisory conference with Nexora practice partners.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23070D18'/><path d='M8 24L16 8L24 24H19L16 17L13 24H8Z' fill='%2300B4D8'/></svg>">
+  <meta name="description" content="Schedule a confidential strategic advisory conference with Nexora practice directors.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B1B3D'/><text x='16' y='22' font-family='serif' font-size='18' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'>N</text></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
@@ -13,42 +13,47 @@
   <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo">
+      <a href="index.html" class="brand-logo" aria-label="Nexora Advisory Home">
         <div class="brand-mark">N</div>
-        <span class="brand-name">NEXORA</span>
+        <div>
+          <span class="brand-name">NEXORA</span>
+          <span class="brand-sub">Advisory • Mumbai • APAC</span>
+        </div>
       </a>
+
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="consulting.html" class="nav-link">Consulting</a></li>
-          <li><a href="technology.html" class="nav-link">Technology</a></li>
-          <li><a href="transformation.html" class="nav-link">Transformation</a></li>
-          <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
-          <li><a href="insights.html" class="nav-link">Insights</a></li>
+          <li><a href="index.html" class="nav-link">Overview</a></li>
+          <li><a href="about.html" class="nav-link">Firm & Partners</a></li>
+          <li><a href="consulting.html" class="nav-link">Practices</a></li>
+          <li><a href="technology.html" class="nav-link">Enterprise Cloud</a></li>
+          <li><a href="transformation.html" class="nav-link">Capital Governance</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      <a href="contact.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.82rem;">Request Proposal</a>
+
+      <a href="contact.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.82rem;">Direct Partner Desk</a>
     </div>
   </header>
 
-  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px;">
-    <div class="container" style="max-width: 840px;">
-      <div style="text-align: center; margin-bottom: 48px;">
+  <main style="padding-top: calc(var(--header-height) + 50px); padding-bottom: 96px; background: var(--bg-secondary);">
+    <div class="container" style="max-width: 820px;">
+      <div style="text-align: center; margin-bottom: 40px;">
         <span class="eyebrow">Partner Advisory Access</span>
-        <h1>Schedule Executive Consultation</h1>
-        <p class="lead">30 or 60-minute confidential strategic briefing with a Nexora Practice Director.</p>
+        <h1 style="margin-bottom: 16px;">Schedule Executive Consultation</h1>
+        <p class="lead" style="max-width: 620px; margin: 0 auto;">
+          30 or 60-minute confidential strategic briefing with a Nexora Practice Director.
+        </p>
       </div>
 
-      <div class="form-card">
+      <div class="form-editorial-card">
         <form id="consultation-form">
           <!-- Honeypot -->
-          <div class="honeypot" aria-hidden="true">
+          <div style="display:none;" aria-hidden="true">
             <input type="text" name="website_hp" tabindex="-1" autocomplete="off">
           </div>
 
-          <div class="form-row">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div class="form-group">
               <label class="form-label">Preferred Date *</label>
               <input type="date" name="preferredDate" id="book-date" class="form-input" required>
@@ -65,7 +70,7 @@
             </div>
           </div>
 
-          <div class="form-row">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div class="form-group">
               <label class="form-label">Executive Name *</label>
               <input type="text" name="name" class="form-input" placeholder="e.g. Rajiv Singhania" required>
@@ -76,7 +81,7 @@
             </div>
           </div>
 
-          <div class="form-row">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div class="form-group">
               <label class="form-label">Direct Telephone *</label>
               <input type="tel" name="phone" class="form-input" placeholder="+91 98200 12345" required>
@@ -87,7 +92,7 @@
             </div>
           </div>
 
-          <div class="form-row">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div class="form-group">
               <label class="form-label">Primary Practice Required</label>
               <select name="service" class="form-select">
@@ -98,7 +103,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Estimated Engagement Budget</label>
+              <label class="form-label">Estimated Engagement Scope</label>
               <select name="budget" class="form-select">
                 <option value="₹10,00,000 – ₹25,00,000">₹10,00,000 – ₹25,00,000</option>
                 <option value="₹25,00,000 – ₹50,00,000" selected>₹25,00,000 – ₹50,00,000</option>
@@ -110,41 +115,43 @@
 
           <div class="form-group">
             <label class="form-label">Discussion Agenda & Strategic Context *</label>
-            <textarea name="message" class="form-textarea" placeholder="Outline your key operational bottlenecks, modernization goals, or target timelines..." required></textarea>
+            <textarea name="message" class="form-textarea" rows="4" placeholder="Outline your key operational bottlenecks, modernization goals, or target timelines..." required></textarea>
           </div>
 
-          <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">Confirm Strategic Briefing</button>
-          <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 12px;">
+          <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 0.95rem;">Confirm Strategic Briefing &rarr;</button>
+          <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 14px;">
             Strict confidentiality guaranteed under mutual non-disclosure standards.
           </p>
         </form>
 
-        <div id="receipt" class="receipt-box">
-          <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(0, 180, 216, 0.1); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <!-- Dynamic Success Confirmation Modal -->
+        <div id="receipt" style="display: none; text-align: center; padding: 40px 20px;">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: #EFF6FF; color: var(--bg-navy); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
-          <span class="eyebrow">Briefing Scheduled</span>
-          <h2>Consultation Request Confirmed</h2>
-          <p>Your session has been queued with the Nexora managing partner desk and recorded in the ScaleNova CRM.</p>
-          <div class="receipt-ref" id="ref-id">SN-NEX-XXXXXXXX</div>
-          <div style="margin-top: 24px;">
-            <a href="index.html" class="btn btn-secondary">Return to Overview</a>
+          <span class="eyebrow">Briefing Queued</span>
+          <h2 style="margin-bottom: 12px;">Consultation Request Received</h2>
+          <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 24px; font-size: 0.95rem;">
+            Your executive briefing request has been securely recorded. Our Managing Partner desk is reviewing your agenda and will dispatch calendar credentials shortly.
+          </p>
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border-medium); padding: 16px; font-family: monospace; font-size: 1.1rem; color: var(--bg-navy); font-weight: 700; margin-bottom: 28px;" id="ref-id">
+            SN-D01-XXXXXXXX
           </div>
+          <a href="index.html" class="btn btn-primary">Return to Nexora Overview</a>
         </div>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container" style="text-align: center; font-size: 0.8rem; color: var(--text-muted);">
-      &copy; 2026 Nexora Advisory. ScaleNova Systems EliteOS Demonstration.
+    <div class="container" style="text-align: center; font-size: 0.82rem; color: var(--text-light-muted);">
+      &copy; 2026 Nexora Advisory Private Limited. ScaleNova Systems EliteOS Client Platform.
     </div>
   </footer>
 
   <script src="src/config/index.js"></script>
   <script src="src/services/api.js"></script>
   <script>
-    // Set minimum date to tomorrow
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     document.getElementById('book-date').min = tomorrow.toISOString().split('T')[0];
@@ -159,18 +166,18 @@
       const formData = new FormData(this);
       const data = Object.fromEntries(formData.entries());
       data.leadType = 'CONSULTATION';
-      data.page = 'Book Consultation';
+      data.page = '/book-consultation.html';
 
       try {
         const result = await ScaleNovaAPI.submitLead(data);
         document.getElementById('consultation-form').style.display = 'none';
-        document.getElementById('ref-id').textContent = result.submissionId;
-        document.getElementById('receipt').classList.add('active');
+        document.getElementById('ref-id').textContent = result.submissionId || result.submission_id || 'SN-D01-CONFIRMED';
+        document.getElementById('receipt').style.display = 'block';
       } catch (err) {
         alert(err.message || 'Error scheduling consultation. Please contact direct desk.');
       } finally {
         btn.disabled = false;
-        btn.textContent = 'Confirm Strategic Briefing';
+        btn.textContent = 'Confirm Strategic Briefing →';
       }
     });
   </script>
