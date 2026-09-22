@@ -28,9 +28,8 @@
     let mouseY = -9999;
 
     function resize() {
-      const parent = canvas.parentElement || document.body;
-      width = canvas.width = parent.offsetWidth || window.innerWidth;
-      height = canvas.height = parent.offsetHeight || window.innerHeight;
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
       createPoints();
     }
 
