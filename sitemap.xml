@@ -1,84 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://demo-nexora.scalenovasys.com/index.html</loc>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/about</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/book-consultation</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/case-studies</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/consulting</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/contact</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://demo-nexora.scalenovasys.com/about.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://demo-nexora.scalenovasys.com/consulting.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://demo-nexora.scalenovasys.com/technology.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://demo-nexora.scalenovasys.com/transformation.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://demo-nexora.scalenovasys.com/case-studies.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://demo-nexora.scalenovasys.com/insights.html</loc>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/insights</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://demo-nexora.scalenovasys.com/plans.html</loc>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/plans</loc>
     <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://demo-nexora.scalenovasys.com/book-consultation.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://demo-nexora.scalenovasys.com/contact.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://demo-nexora.scalenovasys.com/privacy.html</loc>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/privacy</loc>
     <lastmod>2026-09-22</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
-
+  <url>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/technology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/terms</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-01-nexora-advisory.ranam.workers.dev/transformation</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

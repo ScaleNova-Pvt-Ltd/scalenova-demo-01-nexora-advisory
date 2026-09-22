@@ -3,26 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Confidentiality & Privacy Charter — Nexora Advisory</title>
-  <meta name="description" content="Nexora Advisory client confidentiality, NDA standards, and enterprise data governance policy.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23070D18'/><path d='M8 24L16 8L24 24H19L16 17L13 24H8Z' fill='%2300B4D8'/></svg>">
+  <title>Privacy Policy & Data Protection Charter — Nexora Advisory</title>
+  <meta name="description" content="Institutional privacy policy, DPDP Act 2023 compliance, data encryption, and sovereign information governance for Nexora Advisory.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23070D18'/><text x='16' y='22' font-family='serif' font-size='18' font-weight='bold' fill='%2300B4D8' text-anchor='middle'>N</text></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <canvas id="network-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo"><div class="brand-mark">N</div><span class="brand-name">NEXORA</span></a>
-      
+      <a href="index.html" class="brand-logo" aria-label="Nexora Advisory Home">
+        <div class="brand-mark">N</div>
+        <div>
+          <span class="brand-name">NEXORA ADVISORY</span>
+          <span class="brand-sub">Privacy & Data Governance</span>
+        </div>
+      </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Overview</a></li>
           <li><a href="consulting.html" class="nav-link">Practices</a></li>
           <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
-          <li><a href="about.html" class="nav-link">Firm & Partners</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-
       <div style="display: flex; align-items: center; gap: 14px;">
         <a href="book-consultation.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.82rem; white-space: nowrap;">Book Consultation</a>
         <button type="button" class="mobile-nav-toggle" aria-label="Open mobile menu" onclick="toggleNexoraSidePanel()">
@@ -32,57 +39,180 @@
     </div>
   </header>
 
-  <!-- Slide-Out Mobile App-Like Drawer -->
+  <!-- Side-Out Mobile Drawer -->
   <div class="side-panel-overlay" id="nexoraSideOverlay" onclick="toggleNexoraSidePanel()"></div>
   <aside class="side-panel-drawer" id="nexoraSideDrawer" aria-label="Mobile Navigation">
     <div class="side-panel-header">
       <div style="display: flex; align-items: center; gap: 10px;">
         <div class="brand-mark" style="width: 32px; height: 32px; font-size: 1rem;">N</div>
-        <span class="brand-name" style="font-size: 1.1rem;">NEXORA</span>
+        <span class="brand-name" style="font-size: 1.1rem;">NEXORA ADVISORY</span>
       </div>
       <button class="side-panel-close" aria-label="Close menu" onclick="toggleNexoraSidePanel()">&times;</button>
     </div>
     <ul class="side-panel-nav">
-      <li><a href="index.html">Overview <span>&rarr;</span></a></li>
-      <li><a href="consulting.html">Practices <span>&rarr;</span></a></li>
-      <li><a href="technology.html">Enterprise Cloud <span>&rarr;</span></a></li>
-      <li><a href="transformation.html">Capital Governance <span>&rarr;</span></a></li>
-      <li><a href="case-studies.html">Case Studies <span>&rarr;</span></a></li>
-      <li><a href="insights.html">Executive Insights <span>&rarr;</span></a></li>
-      <li><a href="plans.html">Advisory Mandates <span>&rarr;</span></a></li>
+      <li><a href="index.html">Home <span>&rarr;</span></a></li>
+      <li><a href="consulting.html">Management Consulting <span>&rarr;</span></a></li>
+      <li><a href="technology.html">Enterprise Cloud Architecture <span>&rarr;</span></a></li>
+      <li><a href="case-studies.html">Verified Case Studies <span>&rarr;</span></a></li>
       <li><a href="about.html">Firm & Partners <span>&rarr;</span></a></li>
-      <li><a href="contact.html">Global Offices <span>&rarr;</span></a></li>
-      <li><a href="book-consultation.html">Book Consultation <span>&rarr;</span></a></li>
+      <li><a href="privacy.html">Privacy Charter <span>&rarr;</span></a></li>
+      <li><a href="terms.html">Terms of Engagement <span>&rarr;</span></a></li>
+      <li><a href="contact.html">Offices & Contacts <span>&rarr;</span></a></li>
       <li><a href="sitemap.xml">XML Index <span>&rarr;</span></a></li>
     </ul>
-    <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid var(--border-subtle); font-size: 0.8rem; color: var(--text-muted);">
-      <div>Advisory Dispatch: +91 22 6982 4400</div>
-      <div style="margin-top: 4px;">BKC Mumbai &bull; Singapore</div>
-    </div>
   </aside>
 
-  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px;">
-    <div class="container" style="max-width: 800px;">
-      <span class="eyebrow">Governance & Confidentiality</span>
-      <h1>Client Confidentiality & Privacy Charter</h1>
-      <p class="lead">Nexora Advisory treats all prospective client briefs, financial disclosures, and operational parameters with strict institutional discretion.</p>
+  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px; position: relative; z-index: 1;">
+    <div class="container" style="max-width: 900px;">
+      <!-- Breadcrumb -->
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: #94A3B8; margin-bottom: 24px;">
+        <a href="index.html" style="color: inherit; text-decoration: none;">Home</a>
+        <span>&bull;</span>
+        <span>Institutional Governance</span>
+        <span>&bull;</span>
+        <span style="color: #00B4D8;">Privacy Policy</span>
+      </div>
 
-      <div style="font-size: 0.95rem; line-height: 1.8; color: var(--text-secondary); margin-top: 36px;">
-        <h3 style="color: var(--text-primary); margin-bottom: 8px;">1. Non-Disclosure Commitment</h3>
-        <p>Information submitted through our digital portal or shared during partner consultations is subject to strict professional non-disclosure obligations. Mutual NDAs are executed prior to any on-site discovery or codebase inspection.</p>
+      <span class="eyebrow" style="color: #00B4D8; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem;">CONFIDENTIALITY & DPDP ACT CHARTER</span>
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1.15; margin: 12px 0 20px;">Client Confidentiality & Privacy Policy</h1>
+      <p class="lead" style="font-size: 1.15rem; line-height: 1.7; color: #64748B; margin-bottom: 40px;">
+        Nexora Advisory treats all prospective client briefs, financial disclosures, and operational parameters with strict institutional discretion, complying fully with the Digital Personal Data Protection (DPDP) Act 2023.
+      </p>
 
-        <h3 style="color: var(--text-primary); margin-bottom: 8px; margin-top: 32px;">2. Digital Security & Secret Isolation</h3>
-        <p>All client inquiry transmissions utilize TLS 1.3 encryption in transit and AES-256 encryption at rest. In compliance with ScaleNova security architecture, zero client credentials or database secrets are exposed in client-side code.</p>
+      <!-- Key Stat Summary Strip -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; padding: 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; margin-bottom: 48px;">
+        <div>
+          <div style="font-size: 1.3rem; font-weight: 700; color: #00B4D8;">Zero Monetization</div>
+          <div style="font-size: 0.78rem; color: #94A3B8;">We Never Sell Client Data</div>
+        </div>
+        <div>
+          <div style="font-size: 1.3rem; font-weight: 700; color: #00B4D8;">AES-256 / TLS 1.3</div>
+          <div style="font-size: 0.78rem; color: #94A3B8;">End-to-End Cryptographic Transit</div>
+        </div>
+        <div>
+          <div style="font-size: 1.3rem; font-weight: 700; color: #00B4D8;">India Resident</div>
+          <div style="font-size: 0.78rem; color: #94A3B8;">Sovereign Infrastructure Isolation</div>
+        </div>
+      </div>
 
-        <h3 style="color: var(--text-primary); margin-bottom: 8px; margin-top: 32px;">3. Data Sovereignty & Indian DPDP Act Compliance</h3>
-        <p>All client data is stored on sovereign Indian infrastructure, adhering to the Digital Personal Data Protection (DPDP) Act 2023.</p>
+      <!-- Formal Articles -->
+      <article style="font-size: 0.95rem; line-height: 1.85; color: #475569;">
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">1. Data Fiduciary Commitment</h3>
+        <p>
+          Under the Digital Personal Data Protection Act (DPDP) 2023, Nexora Advisory operates as a Data Fiduciary regarding corporate contacts, appointment inquiries, and technical briefs submitted through this portal. We process personal data solely for purpose-limited evaluation of professional engagements.
+        </p>
+
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">2. Information We Collect</h3>
+        <p>
+          We collect identity and institutional verification data (such as Name, Corporate Email, Direct Telephone, Entity Name, and Inquiry Scope) explicitly provided via our secure interactive consultation forms. Technical telemetry (such as anonymized IP address, browser user-agent, and session timestamps) is logged strictly for anti-abuse and rate-limiting enforcement.
+        </p>
+
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">3. Cryptographic Storage & Zero Client-Side Secret Exposure</h3>
+        <p>
+          In accordance with ScaleNova security architecture, all form submissions are encrypted in transit using TLS 1.3 and stored at rest using AES-256 encryption. Zero administrative credentials, API tokens, or direct database keys are exposed within the frontend JavaScript environment.
+        </p>
+
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">4. Cookie Governance & Session Privacy</h3>
+        <p>
+          We employ strictly necessary session cookies to maintain secure form verification and prevent CSRF attacks. Performance cookies help us monitor server response latencies. You can modify your preferences at any time using our Cookie Preferences modal accessible from the footer.
+        </p>
+
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">5. Data Principal Rights & Data Erasure</h3>
+        <p>
+          Contracting officers and individuals hold the right to inspect, correct, or request the irrevocable erasure of their personal inquiry data from our CRM records by transmitting a formal notice to our Data Protection Officer at <a href="mailto:advisory@nexora.example.com" style="color: #00B4D8; font-weight: 600;">advisory@nexora.example.com</a>.
+        </p>
+      </article>
+
+      <!-- Bottom Contact Callout -->
+      <div style="margin-top: 48px; padding: 24px; background: rgba(0,0,0,0.02); border-left: 3px solid #00B4D8;">
+        <div style="font-weight: 700; color: #0F172A; margin-bottom: 6px;">Data Protection Inquiries & DPO Contact</div>
+        <div style="font-size: 0.9rem; color: #64748B;">For statutory compliance matters, address correspondence to <a href="mailto:advisory@nexora.example.com" style="color: #00B4D8; font-weight: 600;">advisory@nexora.example.com</a> or telephone <a href="tel:+912269824400" style="color: #0F172A; font-weight: 600;">+91 22 6982 4400</a>.</div>
       </div>
     </div>
   </main>
 
+  
+  <!-- Standardized Premium Enterprise Footer -->
+  <!-- Standardized Premium Enterprise Footer -->
   <footer class="site-footer">
-    <div class="container" style="text-align: center; font-size: 0.8rem; color: var(--text-muted);">&copy; 2026 Nexora Advisory. ScaleNova Systems EliteOS Demonstration.</div>
+    <div class="container footer-grid">
+      <!-- Col 1: Brand & Institutional Mission -->
+      <div class="footer-brand-col">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+          <div class="footer-brand-mark" style="width: 38px; height: 38px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #00B4D8; font-size: 1.15rem;">
+            N
+          </div>
+          <span style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; letter-spacing: 0.04em;">Nexora Advisory</span>
+        </div>
+        <p style="font-size: 0.86rem; line-height: 1.65; color: #94A3B8; margin-bottom: 20px;">
+          Premier management consulting and technology advisory firm empowering enterprises across India and APAC with strategic clarity, cloud modernization, and capital governance.
+        </p>
+        <div style="font-size: 0.82rem; color: #CBD5E1; line-height: 1.8;">
+          <div><strong style="color: #FFFFFF;">Direct Inquiries:</strong> <a href="tel:+912269824400" style="color: #00B4D8; text-decoration: none;">+91 22 6982 4400</a></div>
+          <div><strong style="color: #FFFFFF;">Official Desk:</strong> <a href="mailto:advisory@nexora.example.com" style="color: #94A3B8; text-decoration: none;">advisory@nexora.example.com</a></div>
+          <div style="color: #64748B; margin-top: 4px;">BKC Financial Centre, Bandra East, Mumbai 400051</div>
+        </div>
+      </div>
+
+      <!-- Col 2: Core Offerings / Practices -->
+      <div>
+        <h4 class="footer-heading" style="color: #FFFFFF; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 18px; font-weight: 700;">Advisory Practices</h4>
+        <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="consulting.html">Management Consulting</a></li>
+            <li><a href="technology.html">Enterprise Cloud Architecture</a></li>
+            <li><a href="transformation.html">Capital Governance</a></li>
+            <li><a href="plans.html">Advisory Mandates & Plans</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Firm / Institutional Infrastructure -->
+      <div>
+        <h4 class="footer-heading" style="color: #FFFFFF; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 18px; font-weight: 700;">Firm & Intelligence</h4>
+        <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+            <li><a href="about.html">Firm & Partners</a></li>
+            <li><a href="case-studies.html">Verified Case Studies</a></li>
+            <li><a href="insights.html">Executive Insights</a></li>
+            <li><a href="contact.html">Global Offices</a></li>
+            <li><a href="book-consultation.html">Book Client Consultation</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Governance, Compliance & Legal -->
+      <div>
+        <h4 class="footer-heading" style="color: #FFFFFF; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 18px; font-weight: 700;">Governance & Trust</h4>
+        <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+          <li><a href="privacy.html">Privacy & Data Charter</a></li>
+          <li><a href="terms.html">Terms & Client Mandate</a></li>
+          <li><a href="javascript:void(0)" onclick="openCookiePreferences()">Cookie Preferences</a></li>
+          <li><a href="sitemap.xml">XML Index Sitemap</a></li>
+          <li><a href="contact.html">Compliance & Legal Desks</a></li>
+        </ul>
+        <div style="margin-top: 20px; padding: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px;">
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: #10B981; font-weight: 600;">
+            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10B981;"></span>
+            DPDP Act 2023 &bull; ISO 27001
+          </div>
+          <div style="font-size: 0.72rem; color: #64748B; margin-top: 4px;">ScaleNova EliteOS Sovereign Client Architecture</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="container footer-bottom" style="margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.8rem; color: #64748B;">
+      <div>
+        &copy; 2026 Nexora Advisory. All institutional rights reserved. Operating on ScaleNova Multi-Tenant Cloud.
+      </div>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <a href="privacy.html" style="color: #94A3B8; text-decoration: none;">Privacy Policy</a>
+        <a href="terms.html" style="color: #94A3B8; text-decoration: none;">Terms of Service</a>
+        <a href="javascript:void(0)" onclick="openCookiePreferences()" style="color: #94A3B8; text-decoration: none;">Cookie Preferences</a>
+        <a href="sitemap.xml" style="color: #94A3B8; text-decoration: none;">Sitemap.xml</a>
+      </div>
+    </div>
   </footer>
+  
+  
 
   <script>
     function toggleNexoraSidePanel() {
@@ -101,6 +231,50 @@
         }
       }
     }
+  </script>
+<!-- Premium Cookie Consent Banner -->
+  <div id="scalenova-cookie-banner" class="cookie-banner-wrap" style="display:none;" role="dialog" aria-live="polite" aria-label="Cookie Preferences">
+    <div class="cookie-banner-card">
+      <div class="cookie-banner-content">
+        <div class="cookie-banner-icon" style="color: #00B4D8;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M7 15v.01"></path><path d="M11 12v.01"></path><path d="M16 16v.01"></path></svg>
+        </div>
+        <div class="cookie-banner-text">
+          <div class="cookie-banner-title">Cookie & Data Privacy Preferences</div>
+          <p class="cookie-banner-desc">
+            We use strictly necessary session cookies to ensure secure identity verification and analytics performance in compliance with the Digital Personal Data Protection (DPDP) Act 2023. You may accept all or restrict to essential cookies. Read our <a href="privacy.html" style="color: #00B4D8;">Privacy Charter</a>.
+          </p>
+        </div>
+      </div>
+      <div class="cookie-banner-actions">
+        <button type="button" class="cookie-btn-primary" style="background: #00B4D8; color: #070D18;" onclick="setScalenovaCookieConsent('all')">Accept All</button>
+        <button type="button" class="cookie-btn-secondary" onclick="setScalenovaCookieConsent('essential')">Essential Only</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const CONSENT_KEY = 'scalenova_cookie_consent_v1';
+      function getConsent() {
+        try { return localStorage.getItem(CONSENT_KEY); } catch(e) { return null; }
+      }
+      window.setScalenovaCookieConsent = function(val) {
+        try { localStorage.setItem(CONSENT_KEY, val); } catch(e) {}
+        const b = document.getElementById('scalenova-cookie-banner');
+        if (b) b.style.display = 'none';
+      };
+      window.openCookiePreferences = function() {
+        const b = document.getElementById('scalenova-cookie-banner');
+        if (b) b.style.display = 'block';
+      };
+      if (!getConsent()) {
+        setTimeout(function() {
+          const b = document.getElementById('scalenova-cookie-banner');
+          if (b) b.style.display = 'block';
+        }, 800);
+      }
+    })();
   </script>
 </body>
 </html>

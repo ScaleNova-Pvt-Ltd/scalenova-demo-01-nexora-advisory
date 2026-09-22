@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request Proposal & Partner Desks — Nexora Advisory</title>
-  <meta name="description" content="Submit an RFP or contact Nexora's advisory desks in Mumbai, Bengaluru, Singapore, or London.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B1B3D'/><text x='16' y='22' font-family='serif' font-size='18' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'>N</text></svg>">
+  <title>Terms & Client Mandate Conditions — Nexora Advisory</title>
+  <meta name="description" content="Institutional client mandate terms, engagement conditions, intellectual property rights, and governance framework for Nexora Advisory.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23070D18'/><text x='16' y='22' font-family='serif' font-size='18' font-weight='bold' fill='%2300B4D8' text-anchor='middle'>N</text></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <canvas id="network-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
 
-  <!-- Header -->
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-logo" aria-label="Nexora Advisory Home">
         <div class="brand-mark">N</div>
         <div>
-          <span class="brand-name">NEXORA</span>
-          <span class="brand-sub">Advisory • Mumbai • APAC</span>
+          <span class="brand-name">NEXORA ADVISORY</span>
+          <span class="brand-sub">Client Mandate & Terms</span>
         </div>
       </a>
       <nav aria-label="Main Navigation">
@@ -25,11 +26,10 @@
           <li><a href="index.html" class="nav-link">Overview</a></li>
           <li><a href="consulting.html" class="nav-link">Practices</a></li>
           <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
-          <li><a href="about.html" class="nav-link">Firm & Partners</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-
       <div style="display: flex; align-items: center; gap: 14px;">
         <a href="book-consultation.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.82rem; white-space: nowrap;">Book Consultation</a>
         <button type="button" class="mobile-nav-toggle" aria-label="Open mobile menu" onclick="toggleNexoraSidePanel()">
@@ -39,152 +39,105 @@
     </div>
   </header>
 
-  <!-- Slide-Out Mobile App-Like Drawer -->
+  <!-- Side-Out Mobile Drawer -->
   <div class="side-panel-overlay" id="nexoraSideOverlay" onclick="toggleNexoraSidePanel()"></div>
   <aside class="side-panel-drawer" id="nexoraSideDrawer" aria-label="Mobile Navigation">
     <div class="side-panel-header">
       <div style="display: flex; align-items: center; gap: 10px;">
         <div class="brand-mark" style="width: 32px; height: 32px; font-size: 1rem;">N</div>
-        <span class="brand-name" style="font-size: 1.1rem;">NEXORA</span>
+        <span class="brand-name" style="font-size: 1.1rem;">NEXORA ADVISORY</span>
       </div>
       <button class="side-panel-close" aria-label="Close menu" onclick="toggleNexoraSidePanel()">&times;</button>
     </div>
     <ul class="side-panel-nav">
-      <li><a href="index.html">Overview <span>&rarr;</span></a></li>
-      <li><a href="consulting.html">Practices <span>&rarr;</span></a></li>
-      <li><a href="technology.html">Enterprise Cloud <span>&rarr;</span></a></li>
-      <li><a href="transformation.html">Capital Governance <span>&rarr;</span></a></li>
-      <li><a href="case-studies.html">Case Studies <span>&rarr;</span></a></li>
+      <li><a href="index.html">Home <span>&rarr;</span></a></li>
+      <li><a href="consulting.html">Management Consulting <span>&rarr;</span></a></li>
+      <li><a href="technology.html">Enterprise Cloud Architecture <span>&rarr;</span></a></li>
+      <li><a href="case-studies.html">Verified Case Studies <span>&rarr;</span></a></li>
       <li><a href="about.html">Firm & Partners <span>&rarr;</span></a></li>
-      <li><a href="contact.html">Contact <span>&rarr;</span></a></li>
+      <li><a href="privacy.html">Privacy Charter <span>&rarr;</span></a></li>
+      <li><a href="terms.html">Terms of Engagement <span>&rarr;</span></a></li>
+      <li><a href="contact.html">Offices & Contacts <span>&rarr;</span></a></li>
+      <li><a href="sitemap.xml">XML Index <span>&rarr;</span></a></li>
     </ul>
-    <div style="margin-top: auto; padding-top: 24px;">
-      <a href="book-consultation.html" class="btn btn-primary" style="width: 100%; text-align: center; padding: 14px;">Book a Consultation &rarr;</a>
-    </div>
   </aside>
 
-  <main style="padding-top: calc(var(--header-height) + 50px); padding-bottom: 96px; background: var(--bg-secondary);">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 48px;">
-        <span class="eyebrow">Enterprise Inquiries</span>
-        <h1 style="margin-bottom: 16px;">Request Advisory Proposal</h1>
-        <p class="lead" style="max-width: 640px; margin: 0 auto;">
-          Submit a formal RFP, scope a transformation sprint, or connect directly with our regional managing partners.
-        </p>
+  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px; position: relative; z-index: 1;">
+    <div class="container" style="max-width: 900px;">
+      <!-- Breadcrumb -->
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: #94A3B8; margin-bottom: 24px;">
+        <a href="index.html" style="color: inherit; text-decoration: none;">Home</a>
+        <span>&bull;</span>
+        <span>Institutional Governance</span>
+        <span>&bull;</span>
+        <span style="color: #00B4D8;">Terms of Service</span>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 48px; align-items: start;">
-        <!-- Form -->
-        <div class="form-editorial-card">
-          <form id="contact-form">
-            <div style="display:none;" aria-hidden="true">
-              <input type="text" name="website_hp" tabindex="-1" autocomplete="off">
-            </div>
+      <span class="eyebrow" style="color: #00B4D8; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem;">STATUTORY & MANDATE CHARTER</span>
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1.15; margin: 12px 0 20px;">Institutional Client Mandate & Terms of Engagement</h1>
+      <p class="lead" style="font-size: 1.15rem; line-height: 1.7; color: #64748B; margin-bottom: 40px;">
+        These Master Engagement Terms govern all advisory contracts, technical deliveries, and corporate representations between Nexora Advisory and contracting entities.
+      </p>
 
-            <div class="form-row-2col">
-              <div class="form-group">
-                <label class="form-label">Full Name *</label>
-                <input type="text" name="name" class="form-input" placeholder="e.g. Shalini Roy" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Corporate Email *</label>
-                <input type="email" name="email" class="form-input" placeholder="shalini@royenterprises.in" required>
-              </div>
-            </div>
-
-            <div class="form-row-2col">
-              <div class="form-group">
-                <label class="form-label">Contact Phone *</label>
-                <input type="tel" name="phone" class="form-input" placeholder="+91 98300 44556" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Enterprise / Organization *</label>
-                <input type="text" name="company" class="form-input" placeholder="e.g. Roy Enterprises" required>
-              </div>
-            </div>
-
-            <div class="form-row-2col">
-              <div class="form-group">
-                <label class="form-label">Advisory Discipline</label>
-                <select name="service" class="form-select">
-                  <option value="Strategic Management Consulting">Strategic Management Consulting</option>
-                  <option value="Cloud Modernization & Enterprise Tech">Cloud Modernization & Enterprise Tech</option>
-                  <option value="M&A Synergy & Capital Transformation">M&A Synergy & Capital Transformation</option>
-                  <option value="Operational Due Diligence">Operational Due Diligence</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Target Investment / Budget</label>
-                <select name="budget" class="form-select">
-                  <option value="₹10,00,000 – ₹25,00,000">₹10 Lakh – ₹25 Lakh</option>
-                  <option value="₹25,00,000 – ₹50,00,000" selected>₹25 Lakh – ₹50 Lakh</option>
-                  <option value="₹50,00,000 – ₹1,00,00,000">₹50 Lakh – ₹1 Crore</option>
-                  <option value="₹1,00,00,000+">₹1 Crore+ (Full Enterprise Scope)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Scope of Work & Objectives *</label>
-              <textarea name="message" class="form-textarea" rows="4" placeholder="Detail your mandate, expected deliverables, and decision milestones..." required></textarea>
-            </div>
-
-            <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%; padding: 16px;">Transmit Formal Proposal Request &rarr;</button>
-          </form>
-
-          <div id="receipt" style="display: none; text-align: center; padding: 40px 20px;">
-            <div style="width: 56px; height: 56px; border-radius: 50%; background: #EFF6FF; color: var(--bg-navy); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            </div>
-            <span class="eyebrow">Proposal Logged</span>
-            <h2 style="margin-bottom: 12px;">RFP Transmitted Successfully</h2>
-            <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto 24px;">
-              Your inquiry has been routed to the relevant practice lead. You will receive an acknowledgment and preliminary scoping document within 1 business day.
-            </p>
-            <div style="background: var(--bg-secondary); border: 1px solid var(--border-medium); padding: 16px; font-family: monospace; font-size: 1.1rem; color: var(--bg-navy); font-weight: 700; margin-bottom: 24px;" id="ref-id">
-              SN-D01-XXXXXXXX
-            </div>
-            <a href="index.html" class="btn btn-primary">Return to Nexora Overview</a>
-          </div>
+      <!-- Key Stat Summary Strip -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; padding: 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; margin-bottom: 48px;">
+        <div>
+          <div style="font-size: 1.3rem; font-weight: 700; color: #00B4D8;">Strict NDA</div>
+          <div style="font-size: 0.78rem; color: #94A3B8;">Mutual Non-Disclosure Required</div>
         </div>
-
-        <!-- Regional Offices Info -->
-        <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); padding: 40px;">
-          <span class="eyebrow">Regional Offices</span>
-          <h3 style="margin-bottom: 24px; font-size: 1.4rem;">Direct Executive Desks</h3>
-
-          <div style="margin-bottom: 28px;">
-            <h4 style="font-size: 0.95rem; color: var(--bg-navy); margin-bottom: 6px;">Mumbai (Global Headquarters)</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-              BKC Financial Centre, Level 14, Bandra Kurla Complex, Mumbai 400051<br>
-              Direct: +91 (022) 6982 4400
-            </p>
-          </div>
-
-          <div style="margin-bottom: 28px;">
-            <h4 style="font-size: 0.95rem; color: var(--bg-navy); margin-bottom: 6px;">Bengaluru Tech Practice</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-              Outer Ring Road Tech Hub, Bellandur, Bengaluru 560103<br>
-              Direct: +91 (080) 4920 1800
-            </p>
-          </div>
-
-          <div style="margin-bottom: 28px;">
-            <h4 style="font-size: 0.95rem; color: var(--bg-navy); margin-bottom: 6px;">Singapore APAC Gateway</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-              Marina Bay Financial Centre, Tower 2, Singapore 018983
-            </p>
-          </div>
-
-          <div style="padding-top: 20px; border-top: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.08em; margin-bottom: 8px;">Direct Correspondence</div>
-            <a href="mailto:advisory@nexora.example.com" style="color: var(--bg-navy); font-weight: 600; text-decoration: none; font-size: 0.95rem;">advisory@nexora.example.com</a>
-          </div>
+        <div>
+          <div style="font-size: 1.3rem; font-weight: 700; color: #00B4D8;">100% Retained</div>
+          <div style="font-size: 0.78rem; color: #94A3B8;">Client IP Exclusivity Standard</div>
         </div>
+        <div>
+          <div style="font-size: 1.3rem; font-weight: 700; color: #00B4D8;">Mumbai</div>
+          <div style="font-size: 0.78rem; color: #94A3B8;">Primary Legal Seat & Forum</div>
+        </div>
+      </div>
+
+      <!-- Formal Articles -->
+      <article style="font-size: 0.95rem; line-height: 1.85; color: #475569;">
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">1. Engagement Scope & Letter of Mandate</h3>
+        <p>
+          All deliverables, strategic advisory retainers, and technical specifications are formally governed by an executed Letter of Mandate (LoM) or Master Services Agreement (MSA). Proposals and discovery representations shall not constitute a binding operational covenant until formal signing by an authorized officer of Nexora Advisory.
+        </p>
+
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">2. Intellectual Property & Deliverable Ownership</h3>
+        <p>
+          Upon receipt of full contract settlement, all bespoke codebases, structural drawings, proprietary analyses, and domain assets authored exclusively for the client shall vest irrevocably with the contracting client entity. Pre-existing frameworks, proprietary mathematical engines, and ScaleNova multi-tenant operational primitives remain the exclusive property of ScaleNova Systems.
+        </p>
+
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">3. Confidentiality & Non-Disclosure Governance</h3>
+        <p>
+          Both parties agree to hold in strict institutional confidence all proprietary operational parameters, pricing sheets, trade secrets, and technological designs. Mutual non-disclosure obligations shall endure for a period of five (5) years following the completion of engagements.
+        </p>
+
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">4. Warranties & Limitation of Liability</h3>
+        <p>
+          Deliverables are rendered in accordance with Tier-1 industry standards. Neither party shall be liable for indirect, incidental, punitive, or consequential commercial damages, including lost revenue or business interruption, exceeding the total contract fees remitted under the applicable statement of work in the preceding twelve-month period.
+        </p>
+
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">5. Dispute Resolution & Governing Law</h3>
+        <p>
+          These Terms and any dispute arising hereunder shall be construed and governed in accordance with the laws of the Republic of India. Any controversy shall be submitted to binding arbitration in Mumbai, Maharashtra, administered under the Indian Arbitration and Conciliation Act, 1996 by a single arbitrator appointed mutually.
+        </p>
+
+        <h3 style="color: #0F172A; margin: 32px 0 12px; font-size: 1.25rem;">6. Digital Inquiry Portals & ScaleNova Security Verification</h3>
+        <p>
+          Inquiries dispatched via our web application gateway are authenticated via secure tokenized protocols. No database credentials or internal enterprise secrets are exposed in browser code. All transmissions comply with TLS 1.3 encryption.
+        </p>
+      </article>
+
+      <!-- Bottom Contact Callout -->
+      <div style="margin-top: 48px; padding: 24px; background: rgba(0,0,0,0.02); border-left: 3px solid #00B4D8;">
+        <div style="font-weight: 700; color: #0F172A; margin-bottom: 6px;">Questions Regarding Client Terms?</div>
+        <div style="font-size: 0.9rem; color: #64748B;">Reach our legal compliance team at <a href="mailto:advisory@nexora.example.com" style="color: #00B4D8; font-weight: 600;">advisory@nexora.example.com</a> or telephone <a href="tel:+912269824400" style="color: #0F172A; font-weight: 600;">+91 22 6982 4400</a>.</div>
       </div>
     </div>
   </main>
 
+  
+  <!-- Standardized Premium Enterprise Footer -->
   <!-- Standardized Premium Enterprise Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
@@ -263,46 +216,24 @@
       </div>
     </div>
   </footer>
+  
+  
 
-  <script src="src/config/index.js"></script>
-  <script src="src/services/api.js"></script>
   <script>
-    document.getElementById('contact-form').addEventListener('submit', async function (e) {
-      e.preventDefault();
-      const btn = document.getElementById('submit-btn');
-      btn.disabled = true;
-      btn.textContent = 'Transmitting Proposal Request...';
-
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData.entries());
-      data.leadType = 'CONTACT';
-      data.page = '/contact.html';
-
-      try {
-        const result = await ScaleNovaAPI.submitLead(data);
-        document.getElementById('contact-form').style.display = 'none';
-        document.getElementById('ref-id').textContent = result.submissionId || result.submission_id || 'SN-D01-CONFIRMED';
-        document.getElementById('receipt').style.display = 'block';
-      } catch (err) {
-        alert(err.message || 'Error submitting request. Please try again.');
-      } finally {
-        btn.disabled = false;
-        btn.textContent = 'Transmit Formal Proposal Request →';
-      }
-    });
-
     function toggleNexoraSidePanel() {
-      const drawer = document.getElementById('nexoraSideDrawer');
-      const overlay = document.getElementById('nexoraSideOverlay');
-      const isOpen = drawer.classList.contains('active');
-      if (isOpen) {
-        drawer.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.classList.remove('side-panel-open');
-      } else {
-        drawer.classList.add('active');
-        overlay.classList.add('active');
-        document.body.classList.add('side-panel-open');
+      const drawer = document.getElementById("nexoraSideDrawer");
+      const overlay = document.getElementById("nexoraSideOverlay");
+      if (drawer && overlay) {
+        const isOpen = drawer.classList.contains("active");
+        if (isOpen) {
+          drawer.classList.remove("active");
+          overlay.classList.remove("active");
+          document.body.classList.remove("side-panel-open");
+        } else {
+          drawer.classList.add("active");
+          overlay.classList.add("active");
+          document.body.classList.add("side-panel-open");
+        }
       }
     }
   </script>
