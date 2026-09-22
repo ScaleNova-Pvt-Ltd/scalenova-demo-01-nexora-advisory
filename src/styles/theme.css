@@ -149,7 +149,7 @@ p.lead {
 
 /* Header & Nav */
 .site-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -1407,4 +1407,25 @@ body.side-panel-open {
     width: 100%;
     text-align: center;
   }
+}
+
+main {
+  position: relative !important;
+  z-index: 1 !important;
+}
+.hero-editorial {
+  padding-top: 48px !important;
+}
+.brand-logo {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+.top-dispatch-bar {
+  position: relative !important;
+  z-index: 1001 !important;
 }
