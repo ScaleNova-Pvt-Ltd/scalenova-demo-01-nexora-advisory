@@ -3,64 +3,327 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Executive Insights & Perspectives — Nexora Advisory</title>
-  <meta name="description" content="Thought leadership, whitepapers, and strategic perspectives on Indian enterprise growth, technology modernization, and governance.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23070D18'/><path d='M8 24L16 8L24 24H19L16 17L13 24H8Z' fill='%2300B4D8'/></svg>">
+  <title>Executive Insights, Research & Whitepapers — Nexora Advisory</title>
+  <meta name="description" content="Strategic research, empirical whitepapers, and boardroom perspectives on enterprise cloud modernization, M&A governance, and supply chain scaling across India and APAC.">
+  <meta name="keywords" content="enterprise whitepapers, consulting research Mumbai, zero downtime cloud playbook, family business governance, India manufacturing shift">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Executive Insights, Research & Whitepapers — Nexora Advisory">
+  <meta property="og:description" content="Empirical boardroom research, architectural playbooks, and strategic perspectives.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Nexora Advisory Executive Insights",
+    "description": "Strategic research and whitepapers on enterprise modernization, capital governance, and supply chain excellence.",
+    "publisher": {
+      "@type": "ConsultingBusiness",
+      "name": "Nexora Advisory"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B1B3D'/><text x='16' y='22' font-family='serif' font-size='18' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'>N</text></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Dynamic Network Canvas -->
+  <canvas id="network-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Dispatch Bar -->
+  <div class="top-dispatch-bar">
+    <div class="container top-dispatch-inner">
+      <div class="top-dispatch-tag">
+        <span class="pulse-indicator"></span>
+        <span>RESEARCH</span> &bull; Empirical Enterprise Papers &bull; Mumbai BKC &bull; Singapore
+      </div>
+      <div>
+        <a href="plans.html" style="color:#FFF; text-decoration:none; margin-right:16px; font-weight:600;">Advisory Mandates &rarr;</a>
+        Direct: <a href="tel:+912269824400" style="color:#00B4D8; text-decoration:none; font-weight:600;">+91 22 6982 4400</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo"><div class="brand-mark">N</div><span class="brand-name">NEXORA</span></a>
-      <nav><ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="consulting.html" class="nav-link">Consulting</a></li>
-        <li><a href="technology.html" class="nav-link">Technology</a></li>
-        <li><a href="transformation.html" class="nav-link">Transformation</a></li>
-        <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
-        <li><a href="insights.html" class="nav-link active">Insights</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul></nav>
+      <a href="index.html" class="brand-logo" aria-label="Nexora Advisory Home">
+        <div class="brand-mark">N</div>
+        <div>
+          <span class="brand-name">NEXORA</span>
+          <span class="brand-sub">Advisory • Mumbai • APAC</span>
+        </div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="consulting.html" class="nav-link">Consulting</a></li>
+          <li><a href="technology.html" class="nav-link">Technology</a></li>
+          <li><a href="transformation.html" class="nav-link">Transformation</a></li>
+          <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+          <li><a href="insights.html" class="nav-link active">Insights</a></li>
+          <li><a href="plans.html" class="nav-link">Mandates</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
       <a href="book-consultation.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.82rem;">Book Consultation</a>
     </div>
   </header>
 
-  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px;">
+  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px; position: relative; z-index: 1;">
     <div class="container">
-      <div style="max-width: 820px; margin-bottom: 64px;">
-        <span class="eyebrow">Thought Leadership</span>
-        <h1>Executive Insights & Whitepapers</h1>
-        <p class="lead">Strategic intelligence and empirical research published by Nexora's sector fellows.</p>
+      
+      <!-- Hero Header -->
+      <div style="max-width: 860px; margin-bottom: 48px;">
+        <span class="eyebrow">Sector Intelligence & Research</span>
+        <h1 style="font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.15; margin-bottom: 16px;">
+          Empirical Research for Boardroom Decision-Makers.
+        </h1>
+        <p class="lead" style="color: var(--text-secondary); font-size: 1.15rem; max-width: 720px;">
+          Rigorous whitepapers, quantitative benchmarks, and technical modernization frameworks authored by Nexora’s Managing Partners and Senior Fellows.
+        </p>
       </div>
 
-      <div class="grid-3">
-        <article class="card">
-          <span class="eyebrow">Enterprise Cloud • 6 Min Read</span>
-          <h3 style="margin-bottom: 12px;">The Zero-Downtime Migration Playbook for Indian Financial Enterprises</h3>
-          <p>How leading mid-market banking and FinTech institutions transition core transactional backends without single-second SLA violations.</p>
-          <a href="contact.html" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.85rem;">Download PDF &rarr;</a>
-        </article>
-
-        <article class="card">
-          <span class="eyebrow">Capital Strategy • 8 Min Read</span>
-          <h3 style="margin-bottom: 12px;">Structuring Family Business Governance Ahead of Private Equity Liquidity</h3>
-          <p>Key resolutions, phantom stock vesting schedules, and board oversight mechanisms required prior to institutional capital infusion.</p>
-          <a href="contact.html" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.85rem;">Download PDF &rarr;</a>
-        </article>
-
-        <article class="card">
-          <span class="eyebrow">Manufacturing • 5 Min Read</span>
-          <h3 style="margin-bottom: 12px;">The India + 1 Supply Chain Shift: Capturing High-Value Global Sourcing</h3>
-          <p>Empirical metrics on quality audit automation, aerospace certification readiness, and automated shopfloor tracking.</p>
-          <a href="contact.html" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.85rem;">Download PDF &rarr;</a>
-        </article>
+      <!-- Live KPI Stat Ribbon -->
+      <div class="kpi-ribbon-container" style="margin-bottom: 64px;">
+        <div class="kpi-ribbon-item">
+          <div class="kpi-ribbon-value" data-kpi-target="18" data-kpi-suffix=" Papers">0 Papers</div>
+          <div class="kpi-ribbon-label">Peer-Reviewed Whitepapers</div>
+        </div>
+        <div class="kpi-ribbon-item">
+          <div class="kpi-ribbon-value" data-kpi-target="45" data-kpi-suffix="k+">0k+</div>
+          <div class="kpi-ribbon-label">C-Suite & Board Executive Readers</div>
+        </div>
+        <div class="kpi-ribbon-item">
+          <div class="kpi-ribbon-value" data-kpi-target="4" data-kpi-suffix=" Editions">0 Editions</div>
+          <div class="kpi-ribbon-label">Annual India Conglomerate Index</div>
+        </div>
+        <div class="kpi-ribbon-item">
+          <div class="kpi-ribbon-value" data-kpi-target="100" data-kpi-suffix="%">0%</div>
+          <div class="kpi-ribbon-label">Primary Empirical Ground Data</div>
+        </div>
       </div>
+
+      <!-- 3D Tilt Insights Grid -->
+      <div class="grid-3" style="margin-bottom: 80px;">
+        
+        <!-- Insight 01 -->
+        <article class="card card-3d-tilt" style="display: flex; flex-direction: column; justify-content: space-between; padding: 24px; border-top: 3px solid var(--accent-cyan);">
+          <div>
+            <div style="border-radius: var(--radius-md); overflow: hidden; height: 180px; margin-bottom: 16px;">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Cloud Network Architecture" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="eyebrow" style="margin-bottom: 0;">Cloud Architecture</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">6 MIN READ</span>
+            </div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--text-primary); line-height: 1.35;">
+              The Zero-Downtime Migration Playbook for Indian Financial Enterprises
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+              How leading mid-market banking and FinTech institutions transition core transactional backends without single-second SLA violations or data corruption.
+            </p>
+          </div>
+          <button class="btn btn-secondary" data-open-modal="modal-insight-1" style="width: 100%; font-size: 0.82rem; padding: 10px;">
+            Read Executive Summary &rarr;
+          </button>
+        </article>
+
+        <!-- Insight 02 -->
+        <article class="card card-3d-tilt" style="display: flex; flex-direction: column; justify-content: space-between; padding: 24px; border-top: 3px solid var(--accent-gold);">
+          <div>
+            <div style="border-radius: var(--radius-md); overflow: hidden; height: 180px; margin-bottom: 16px;">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Corporate Boardroom and Skyscraper" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="eyebrow" style="margin-bottom: 0;">Capital & Governance</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">8 MIN READ</span>
+            </div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--text-primary); line-height: 1.35;">
+              Structuring Family Conglomerate Governance Ahead of Private Equity Liquidity
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+              Key resolutions, phantom stock vesting schedules, and board oversight mechanisms required prior to institutional capital infusion and IPO readiness.
+            </p>
+          </div>
+          <button class="btn btn-secondary" data-open-modal="modal-insight-2" style="width: 100%; font-size: 0.82rem; padding: 10px;">
+            Read Executive Summary &rarr;
+          </button>
+        </article>
+
+        <!-- Insight 03 -->
+        <article class="card card-3d-tilt" style="display: flex; flex-direction: column; justify-content: space-between; padding: 24px; border-top: 3px solid #10B981;">
+          <div>
+            <div style="border-radius: var(--radius-md); overflow: hidden; height: 180px; margin-bottom: 16px;">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Automated Manufacturing and Shipping Hub" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="eyebrow" style="margin-bottom: 0;">Supply Chain & Trade</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">5 MIN READ</span>
+            </div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--text-primary); line-height: 1.35;">
+              The India + 1 Supply Chain Shift: Capturing High-Value Global Sourcing
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+              Empirical data on quality audit automation, aerospace certification readiness, and automated shopfloor tracking across 40 domestic manufacturing clusters.
+            </p>
+          </div>
+          <button class="btn btn-secondary" data-open-modal="modal-insight-3" style="width: 100%; font-size: 0.82rem; padding: 10px;">
+            Read Executive Summary &rarr;
+          </button>
+        </article>
+
+      </div>
+
+      <!-- Bottom Advisory CTA -->
+      <div class="card" style="text-align: center; padding: 48px; background: linear-gradient(135deg, rgba(11, 27, 61, 0.9) 0%, rgba(7, 13, 24, 0.95) 100%); border: 1px solid rgba(0, 180, 216, 0.3);">
+        <span class="eyebrow">Enterprise Thought Partnership</span>
+        <h2 style="font-size: 2rem; margin: 12px 0 16px;">Request Custom Research or In-House Briefing</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 28px; font-size: 1rem;">
+          Nexora partners frequently deliver tailored macroeconomic briefings for corporate executive committees and board retreats.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="book-consultation.html" class="btn btn-primary" style="padding: 14px 28px;">Request Executive Briefing &rarr;</a>
+          <a href="contact.html" class="btn btn-secondary" style="padding: 14px 28px;">Contact Research Team</a>
+        </div>
+      </div>
+
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container" style="text-align: center; font-size: 0.8rem; color: var(--text-muted);">&copy; 2026 Nexora Advisory. ScaleNova Systems EliteOS Demonstration.</div>
+  <!-- Interactive Insight Modals -->
+  <div id="modal-insight-1" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="insight-1-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="insight-1-title" class="modal-title">Executive Abstract: Zero-Downtime Migration Playbook</h3>
+        <button class="modal-close" data-close-modal aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="background: rgba(0,180,216,0.06); border-left: 3px solid var(--accent-cyan); padding: 12px 16px; margin-bottom: 16px; font-size: 0.85rem; color: var(--accent-cyan);">
+          Author: Dr. Sunita Varma, Senior Partner &bull; Published Q3 2026 &bull; Technical Guild Whitepaper Series
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 16px;">
+          Monolithic core architectures in Indian banking and NBFCs frequently deter modernization due to catastrophic outage risk during planned maintenance windows. This paper outlines our proven dual-write shadow pipeline model:
+        </p>
+        <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.7; margin-left: 20px;">
+          <li>Reverse-proxy request mirroring allowing real-time reconciliation without impacting legacy throughput.</li>
+          <li>Sub-minute automated rollback protocols eliminating human error during DNS cut-overs.</li>
+          <li>Regulatory compliance checklist satisfying RBI master directions on digital payment security.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-close-modal>Close</button>
+        <a href="book-consultation.html" class="btn btn-primary">Schedule Cloud Advisory Call</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-insight-2" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="insight-2-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="insight-2-title" class="modal-title">Executive Abstract: Family Conglomerate Governance</h3>
+        <button class="modal-close" data-close-modal aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="background: rgba(212,175,55,0.06); border-left: 3px solid var(--accent-gold); padding: 12px 16px; margin-bottom: 16px; font-size: 0.85rem; color: var(--accent-gold);">
+          Author: Karan Singhania, Managing Partner &bull; Published Q2 2026 &bull; Capital Strategy Series
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 16px;">
+          Over 60% of Indian mid-market private equity transactions experience valuation haircuts due to informal promoter agreements, unseparated family office assets, and key-person risk.
+        </p>
+        <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.7; margin-left: 20px;">
+          <li>Clear delineation of operating company balance sheets from ancestral real estate assets.</li>
+          <li>Formation of independent audit committees with professional non-executive director seats.</li>
+          <li>Design of equity-linked retention frameworks for tier-1 non-family executive leadership.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-close-modal>Close</button>
+        <a href="book-consultation.html" class="btn btn-primary">Schedule Governance Scoping Call</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-insight-3" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="insight-3-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="insight-3-title" class="modal-title">Executive Abstract: The India + 1 Supply Chain Shift</h3>
+        <button class="modal-close" data-close-modal aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="background: rgba(16,185,129,0.06); border-left: 3px solid #10B981; padding: 12px 16px; margin-bottom: 16px; font-size: 0.85rem; color: #10B981;">
+          Author: Aditya Nambisan, Partner &bull; Published Q1 2026 &bull; Supply Chain Series
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 16px;">
+          Global multinational manufacturers are aggressively seeking Indian sourcing partners for automotive, defense, and precision electronics components.
+        </p>
+        <ul style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.7; margin-left: 20px;">
+          <li>Automating AS9100 / IATF 16949 audit trail compliance using shopfloor sensor telemetry.</li>
+          <li>Achieving sub-50 PPM (Parts Per Million) defect rates via integrated vision inspection systems.</li>
+          <li>Multi-modal port logistics routing slashing export turnaround times by up to 14 days.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-close-modal>Close</button>
+        <a href="book-consultation.html" class="btn btn-primary">Schedule Supply Chain Call</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer with Rich Sitemap Navigation -->
+  <footer class="site-footer" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); padding: 64px 0 32px; position: relative; z-index: 1;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 48px;">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-mark">N</div>
+            <span class="brand-name">NEXORA</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+            Enterprise strategy, cloud modernization, and operational scale. Trusted by leading conglomerates across India and APAC.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: var(--text-primary); font-size: 0.95rem; margin-bottom: 16px;">Practices</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--text-secondary);">
+            <li><a href="consulting.html" style="color: inherit; text-decoration: none;">Strategic Consulting</a></li>
+            <li><a href="technology.html" style="color: inherit; text-decoration: none;">Technology Architecture</a></li>
+            <li><a href="transformation.html" style="color: inherit; text-decoration: none;">Business Transformation</a></li>
+            <li><a href="case-studies.html" style="color: inherit; text-decoration: none;">Case Studies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: var(--text-primary); font-size: 0.95rem; margin-bottom: 16px;">Company</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--text-secondary);">
+            <li><a href="about.html" style="color: inherit; text-decoration: none;">About Nexora</a></li>
+            <li><a href="insights.html" style="color: inherit; text-decoration: none;">Research & Insights</a></li>
+            <li><a href="plans.html" style="color: inherit; text-decoration: none;">Advisory Mandates</a></li>
+            <li><a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy & Governance</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: var(--text-primary); font-size: 0.95rem; margin-bottom: 16px;">Engagement</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--text-secondary);">
+            <li><a href="book-consultation.html" style="color: inherit; text-decoration: none;">Book Consultation</a></li>
+            <li><a href="contact.html" style="color: inherit; text-decoration: none;">Executive Contact</a></li>
+            <li><a href="sitemap.xml" style="color: inherit; text-decoration: none;">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--border-subtle); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted); flex-wrap: wrap; gap: 12px;">
+        <div>&copy; 2026 Nexora Advisory. ScaleNova Systems EliteOS Client Platform.</div>
+        <div>Mumbai BKC &bull; Bengaluru &bull; Singapore</div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="src/components/network-canvas.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>

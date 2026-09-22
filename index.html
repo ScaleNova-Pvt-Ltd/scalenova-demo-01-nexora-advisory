@@ -36,6 +36,22 @@
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Dynamic Network Canvas -->
+  <canvas id="network-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Dispatch Bar -->
+  <div class="top-dispatch-bar">
+    <div class="container top-dispatch-inner">
+      <div class="top-dispatch-tag">
+        <span class="pulse-indicator"></span>
+        <span>MANDATES Q4 ACTIVE</span> &bull; Strategic Advisory &bull; Mumbai BKC &bull; Singapore
+      </div>
+      <div>
+        <a href="plans.html" style="color:#FFF; text-decoration:none; margin-right:16px; font-weight:600;">View Advisory Mandates &rarr;</a>
+        Direct: <a href="tel:+912269824400" style="color:#00B4D8; text-decoration:none; font-weight:600;">+91 22 6982 4400</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Site Header -->
   <header class="site-header">
@@ -107,6 +123,10 @@
           <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 20px;">
             <a href="book-consultation.html" class="btn btn-primary">Book a Consultation &rarr;</a>
             <a href="consulting.html" class="btn btn-secondary">Explore Practices</a>
+            <button type="button" onclick="openVideoBriefing()" class="btn btn-secondary" style="display:inline-flex; align-items:center; gap:8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Watch Briefing (2 Min)
+            </button>
           </div>
 
           <p style="font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.02em;">
@@ -219,6 +239,99 @@
         </blockquote>
         <div class="quote-citation">
           Rajeshwari Sengupta • Senior Partner & Managing Director, APAC Strategy Practice
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Strategic Mandate Tiers Section -->
+    <section class="section mandate-preview-section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px;">
+          <div>
+            <span class="eyebrow">PREDICTABLE ENGAGEMENT ARCHITECTURE</span>
+            <h2>Partner-Led Advisory Mandate Tiers</h2>
+          </div>
+          <a href="plans.html" class="btn btn-secondary">Compare All Frameworks &rarr;</a>
+        </div>
+
+        <div class="mandate-grid">
+          <!-- Tier 1 -->
+          <div class="mandate-card">
+            <span class="index-num">TIER 01 / SPRINT</span>
+            <h3 style="margin-top: 8px;">Diagnostic Sprint</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">4-week deep forensic audit of operating drag and technical debt.</p>
+            <div class="mandate-price">₹18.5 L</div>
+            <div class="mandate-cadence">Fixed 4-Week Scope</div>
+            <ul class="mandate-features">
+              <li class="mandate-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>360° Tech & Architecture Audit</span>
+              </li>
+              <li class="mandate-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Board Strategic Remediation Plan</span>
+              </li>
+              <li class="mandate-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Lead Partner 20 Direct Hours</span>
+              </li>
+            </ul>
+            <a href="book-consultation.html?tier=DiagnosticSprint" class="btn btn-secondary" style="width: 100%; text-align: center;">Initiate Sprint &rarr;</a>
+          </div>
+
+          <!-- Tier 2 (Featured) -->
+          <div class="mandate-card featured">
+            <div class="mandate-badge">MOST DEMANDED</div>
+            <span class="index-num" style="color: #00B4D8;">TIER 02 / RETAINED PARTNERSHIP</span>
+            <h3 style="margin-top: 8px;">Transformation Retainer</h3>
+            <p style="font-size: 0.9rem; margin-top: 8px;">End-to-end partner governance for enterprise ERP and operational scaling.</p>
+            <div class="mandate-price">₹32.0 L</div>
+            <div class="mandate-cadence">Quarterly Commitment</div>
+            <ul class="mandate-features">
+              <li class="mandate-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Named Senior Practice Director</span>
+              </li>
+              <li class="mandate-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>ScaleNova Enterprise Systems Core</span>
+              </li>
+              <li class="mandate-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Working Capital Release Roadmap</span>
+              </li>
+              <li class="mandate-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Bi-Weekly Steering Committee</span>
+              </li>
+            </ul>
+            <a href="book-consultation.html?tier=TransformationRetainer" class="btn btn-primary" style="background:#00B4D8; color:#071126; width: 100%; text-align: center; font-weight:700;">Retain Advisory Team &rarr;</a>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="mandate-card">
+            <span class="index-num">TIER 03 / TRANSACTION</span>
+            <h3 style="margin-top: 8px;">M&A Advisory & DD</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">Pre-deal forensic audit and post-merger synergy realization.</p>
+            <div class="mandate-price">Custom</div>
+            <div class="mandate-cadence">Milestone Linked</div>
+            <ul class="mandate-features">
+              <li class="mandate-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Forensic Code & Infra Review</span>
+              </li>
+              <li class="mandate-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>EBITDA Synergy Realization</span>
+              </li>
+              <li class="mandate-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>M&A Deals up to ₹500 Cr EV</span>
+              </li>
+            </ul>
+            <a href="book-consultation.html?tier=MAAdvisory" class="btn btn-secondary" style="width: 100%; text-align: center;">Inquire Mandate &rarr;</a>
+          </div>
         </div>
       </div>
     </section>
@@ -352,5 +465,44 @@
       }
     }
   </script>
+
+  <!-- Video Briefing Modal Window -->
+  <div class="modal-overlay" id="videoBriefingModal" onclick="if(event.target===this) closeVideoBriefing()">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeVideoBriefing()">&times;</button>
+      <span class="eyebrow">EXECUTIVE BRIEFING &bull; 2 MINUTES</span>
+      <h3 style="margin: 8px 0 16px;">Nexora Advisory: Operating Philosophy & APAC Delivery</h3>
+      <div class="video-responsive-wrapper">
+        <video controls poster="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80">
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+        Briefing led by Rajeshwari Sengupta, Senior Partner. Outlining our zero-downtime modernization methodology and enterprise board alignment framework across 140+ client engagements.
+      </p>
+      <div style="margin-top: 20px; display:flex; justify-content: flex-end; gap: 12px;">
+        <button class="btn btn-secondary" onclick="closeVideoBriefing()">Close Window</button>
+        <a href="book-consultation.html" class="btn btn-primary">Book Consultation &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openVideoBriefing() {
+      document.getElementById('videoBriefingModal').classList.add('active');
+    }
+    function closeVideoBriefing() {
+      const modal = document.getElementById('videoBriefingModal');
+      modal.classList.remove('active');
+      const video = modal.querySelector('video');
+      if (video) video.pause();
+    }
+  </script>
+
+  <!-- Scripts -->
+  <script src="src/components/network-canvas.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>
