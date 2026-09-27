@@ -12,3 +12,4 @@ DEMO_ID = "DEMO-01"
 CLIENT_NAME = "Nexora Advisory"
 INDUSTRY = "Professional & B2B Services"
 PRIMARY_DOMAIN = "demo1.scalenovasys.com"
+workers_dev = true
