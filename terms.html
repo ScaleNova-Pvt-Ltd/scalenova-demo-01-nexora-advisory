@@ -59,26 +59,42 @@
 
 
   <!-- Side-Out Mobile Drawer -->
+    <!-- Slide-Out Mobile App-Like Drawer -->
   <div class="side-panel-overlay" id="nexoraSideOverlay" onclick="toggleNexoraSidePanel()"></div>
-  <aside class="side-panel-drawer" id="nexoraSideDrawer" aria-label="Mobile Navigation">
+  <aside class="side-panel-drawer" id="nexoraSideDrawer" aria-label="Mobile Navigation" aria-hidden="true">
     <div class="side-panel-header">
       <div style="display: flex; align-items: center; gap: 10px;">
         <div class="brand-mark" style="width: 32px; height: 32px; font-size: 1rem;">N</div>
-        <span class="brand-name" style="font-size: 1.1rem;">NEXORA ADVISORY</span>
+        <span class="brand-name" style="font-size: 1.05rem; font-weight: 700;">NEXORA ADVISORY</span>
       </div>
       <button class="side-panel-close" aria-label="Close menu" onclick="toggleNexoraSidePanel()">&times;</button>
     </div>
-    <ul class="side-panel-nav">
-      <li><a href="index.html">Home <span>&rarr;</span></a></li>
-      <li><a href="consulting.html">Management Consulting <span>&rarr;</span></a></li>
-      <li><a href="technology.html">Enterprise Cloud Architecture <span>&rarr;</span></a></li>
-      <li><a href="case-studies.html">Verified Case Studies <span>&rarr;</span></a></li>
-      <li><a href="about.html">Firm & Partners <span>&rarr;</span></a></li>
-      <li><a href="privacy.html">Privacy Charter <span>&rarr;</span></a></li>
-      <li><a href="terms.html">Terms of Engagement <span>&rarr;</span></a></li>
-      <li><a href="contact.html">Offices & Contacts <span>&rarr;</span></a></li>
-      <li><a href="sitemap.xml">XML Index <span>&rarr;</span></a></li>
-    </ul>
+    <div class="side-panel-body">
+      <div class="side-panel-section-title">CORE PRACTICES</div>
+      <ul class="side-panel-nav">
+        <li><a href="index.html">Overview <span>&rarr;</span></a></li>
+        <li><a href="consulting.html">Strategic Advisory <span>&rarr;</span></a></li>
+        <li><a href="technology.html">Enterprise Cloud <span>&rarr;</span></a></li>
+        <li><a href="transformation.html">Capital Governance <span>&rarr;</span></a></li>
+      </ul>
+      <div class="side-panel-section-title">PORTFOLIO & FIRM</div>
+      <ul class="side-panel-nav">
+        <li><a href="case-studies.html">Case Studies & ROI <span>&rarr;</span></a></li>
+        <li><a href="plans.html">Retainers & Plans <span>&rarr;</span></a></li>
+        <li><a href="about.html">Firm & Partners <span>&rarr;</span></a></li>
+        <li><a href="insights.html">Insights & Briefings <span>&rarr;</span></a></li>
+      </ul>
+      <div class="side-panel-section-title">CONTACT & GOVERNANCE</div>
+      <ul class="side-panel-nav">
+        <li><a href="contact.html">Global Offices <span>&rarr;</span></a></li>
+        <li><a href="privacy.html">Privacy Governance <span>&rarr;</span></a></li>
+        <li><a href="terms.html" class="active">Terms of Engagement <span>&rarr;</span></a></li>
+      </ul>
+    </div>
+    <div class="side-panel-footer">
+      <a href="book-consultation.html" class="btn btn-primary" style="width: 100%; text-align: center; padding: 13px 18px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.92rem; font-weight: 600; text-decoration: none;">Book a Consultation &rarr;</a>
+      <p style="font-size: 0.74rem; opacity: 0.7; text-align: center; margin-top: 10px;">ScaleNova EliteOS Client Platform • Demo 01</p>
+    </div>
   </aside>
 
   <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px; position: relative; z-index: 1;">
@@ -238,23 +254,48 @@
   
   
 
-  <script>
+    <script>
     function toggleNexoraSidePanel() {
       const drawer = document.getElementById("nexoraSideDrawer");
       const overlay = document.getElementById("nexoraSideOverlay");
+      const toggleBtn = document.querySelector(".mobile-nav-toggle");
       if (drawer && overlay) {
         const isOpen = drawer.classList.contains("active");
         if (isOpen) {
           drawer.classList.remove("active");
           overlay.classList.remove("active");
           document.body.classList.remove("side-panel-open");
+          document.documentElement.classList.remove("side-panel-open");
+          drawer.setAttribute("aria-hidden", "true");
+          if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
         } else {
           drawer.classList.add("active");
           overlay.classList.add("active");
           document.body.classList.add("side-panel-open");
+          document.documentElement.classList.add("side-panel-open");
+          drawer.setAttribute("aria-hidden", "false");
+          if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "true");
         }
       }
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const drawer = document.getElementById("nexoraSideDrawer");
+      if (drawer) {
+        document.addEventListener("keydown", function(e) {
+          if (e.key === "Escape" && drawer.classList.contains("active")) {
+            toggleNexoraSidePanel();
+          }
+        });
+        drawer.querySelectorAll("a").forEach(function(link) {
+          link.addEventListener("click", function() {
+            if (drawer.classList.contains("active")) {
+              toggleNexoraSidePanel();
+            }
+          });
+        });
+      }
+    });
   </script>
 <!-- Premium Cookie Consent Banner -->
   <div id="scalenova-cookie-banner" class="cookie-banner-wrap" style="display:none;" role="dialog" aria-live="polite" aria-label="Cookie Preferences">
